@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fo nts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,600;0,800;1,200;1,300;1,600;1,800&display=swap" rel="stylesheet" />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="search-box">
+        <i class="fa-solid fa-location-dot"></i>
+        <input type="type" placeholder="Enter your location" class="input-location" />
+        <button class="fa-solid fa-magnifying-glass search-button"></button>
+      </div>
+      <!-- error 404 -->
+      <div class="error404 d-none">
+        <img src="img/error-404.jpg" />
+        <p>Oops! Location not found!</p>
+      </div>
+      <!-- end of error -->
+      <!-- main content of weather -->
+      <div class="weather-box">
+        <img src="" />
+        <p class="temperature"></p>
+        <p class="description"></p>
+      </div>
+      <!-- end of main content -->
+      <!-- weather details -->
+      <div class="weather-details grid">
+        <div class="humidity">
+          <i class="fa-solid fa-water"></i>
+          <span></span>
+          <p>Humidity</p>
+        </div>
+        <div class="wind">
+          <i class="fa-solid fa-wind"></i>
+          <span></span>
+          <p>Wind Speed</p>
+        </div>
+      </div>
+      <!-- end of weather details -->
+    </div>
+    <script src="https://kit.fontawesome.com/96ba309475.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
