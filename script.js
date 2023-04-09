@@ -3,9 +3,16 @@ const error404 = document.querySelector(".error404");
 const weatherBox = document.querySelector(".weather-box");
 const weatherDetails = document.querySelector(".weather-details");
 const searchButton = document.querySelector(".search-button");
+const inputForm = document.querySelector(".input-location");
 
-searchButton.addEventListener("click", async function () {
-  const keyword = document.querySelector(".input-location").value;
+inputForm.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    buttonClick();
+  }
+});
+
+async function buttonClick() {
+  const keyword = inputForm.value;
   try {
     const data = await getWeatherData(keyword);
     const dataWeather = data.weather[0];
@@ -25,7 +32,7 @@ searchButton.addEventListener("click", async function () {
   } catch (error) {
     show404();
   }
-});
+}
 
 function getWeatherData(keyword) {
   return fetch(`http://api.openweathermap.org/data/2.5/weather?q=${keyword}&APPID=3ef6fee37b1cba51bd5760119eab4cef`)
